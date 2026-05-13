@@ -32,6 +32,9 @@ app.use(
   })
 );
 
+// ADD THIS
+app.use(express.json());
+
 app.use("/api/tasks", taskRoutes);
 
 mongoose
