@@ -3,6 +3,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
 import taskRoutes from "./routes/taskRoutes.js";
+import authRoutes from "./routes/authRoutes.js";
 
 dotenv.config();
 
@@ -34,6 +35,8 @@ app.use(
 
 // ADD THIS
 app.use(express.json());
+
+app.use("/api/auth", authRoutes);
 
 app.use("/api/tasks", taskRoutes);
 
